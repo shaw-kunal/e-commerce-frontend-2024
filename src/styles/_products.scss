@@ -1,0 +1,42 @@
+@import "./mixin";
+@import "./globalCssVariable.scss";
+
+.dashboard-product-box {
+    padding: 1rem;
+    overflow: auto;
+    @include square(100%);
+}
+
+.createNewProduct {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: $sideBarActiveLinkColor;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImg {
+    width: 60px;
+    height: 60px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+
+}
+
+.manageBtn {
+    font-size: .9rem;
+    color: blue;
+    padding: 2px;
+    transition: all .5s ease-in-out;
+    &:hover{
+    color: white!important;
+    background: linear-gradient(to bottom, $btn-color 18%, rgb(134, 132, 132));
+
+}
+}

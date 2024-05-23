@@ -1,0 +1,193 @@
+@import "./_mixin";
+@import "./globalCssVariable";
+
+.dashBoardContainer {
+    padding: 20px;
+
+    .searchBarContainer {
+        @include flex(row);
+        gap: 15px;
+
+        .searchItems {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            flex: 1;
+
+            .searchIcon {
+                position: absolute;
+                bottom: 10px;
+            }
+
+            input {
+                background-color: transparent;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid white;
+                padding: 10px;
+                padding-left: 30px;
+                font-size: 1.1rem;
+                color: $dimmed-white;
+
+                &:focus {
+                    outline: none;
+                    border-color: white;
+                }
+            }
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    .dashBoardStaticsWidget {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 10px;
+
+        .widgetItemContainer {
+            min-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            border-radius: .4rem;
+            cursor: pointer;
+
+            .widgetInfo {
+                :first-child {
+                    text-transform: capitalize;
+                }
+
+                :last-child {
+                    display: flex;
+                    gap: 10px;
+                    font-size: .8rem;
+                }
+            }
+
+            .widgetCircle {
+                position: relative;
+                @include square(5rem);
+                place-items: center;
+                display: grid;
+                border-radius: 50%;
+                background-color: aqua;
+                border: 1px solid white;
+                // background: conic-gradient(from 45deg, blue, red);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    @include square(4rem);
+                    background-color: white;
+                    border-radius: 50%;
+                }
+
+                span {
+                    position: relative;
+                    color: rgba(39, 38, 38, 0.696);
+                }
+            }
+        }
+
+    }
+
+    .graphContainer {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        >div {
+            background-color: $container-bg-color;
+            border: 1px solid $container-border-color;
+            padding: 1rem;
+            border-radius: 10px;
+
+
+
+            >h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+
+        }
+
+        .revenueChart {
+            flex: 3;
+        }
+        .dashboardCategories {
+            flex: 1;
+            min-width: 16rem;
+
+            .categoriesItemContainer {
+                display: grid;
+                grid-template-columns: 1fr 2fr 40px;
+                align-items: center;
+                gap:5px;
+                margin-bottom: .5rem;
+
+                span {
+                    font-size: .9rem;
+                    font-family: "Nanum Myeongjo", serif;
+                    color: $dimmed-white;
+
+                }
+
+                .stockBar {
+                    width: 8rem;
+                    height: 0.5rem;
+                    overflow: hidden;
+                    background: rgba(143, 141, 141, 0.65);
+                    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                    backdrop-filter: blur(16.5px);
+                    -webkit-backdrop-filter: blur(16.5px);
+                    border-radius: 10px;
+
+                    >div {
+                        height: inherit;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .transactionContainer{
+        margin-top: 2rem;
+        display: flex;
+        gap:2rem;
+        height: 30rem;
+        >div{
+            background-color: $container-bg-color;
+            border: 1px solid $container-border-color;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .genderChart{
+            flex:1;
+            position: relative;
+            h2{
+                margin-bottom: 4rem;
+            }
+            p{
+                @include posCenter;
+            }
+            
+        }
+        .transactionTable{
+            flex:3;
+        }
+       
+    }
+}
