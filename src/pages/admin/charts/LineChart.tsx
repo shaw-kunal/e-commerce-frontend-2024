@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductManagement = () => {
+const LineChart = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ProductManagement = () => {
   )
 }
 
-export default ProductManagement
+export default LineChart

@@ -1,0 +1,21 @@
+@import "./mixin";
+@import "./globalCssVariable.scss";
+.btnContainer{
+width: 100%;
+.customButton{
+    display: block;
+    width: 100%;
+    background-color: $btn-color;
+    color:$btn-text-color;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(1.2);
+    }
+
+}
+}

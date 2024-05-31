@@ -1,0 +1,31 @@
+.transactionManagement {
+ height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+        .cardItemContainer {
+            box-shadow: none;
+            height: 70%;
+        }
+        .cardInfoContainer {
+            height: 70%;
+        }
+        .listContainer{
+            grid-template-columns: 100px 20px 1fr;
+        }
+        .amountInfo{
+            grid-template-columns: 150px 20px 1fr;
+        }
+       .statusBtn{
+              padding:10px 0!important;
+       }
+       .orderInfoList{
+        grid-template-columns: 1fr 20px 50px;
+       }
+       .OrderItemImg{
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+       }
+    }

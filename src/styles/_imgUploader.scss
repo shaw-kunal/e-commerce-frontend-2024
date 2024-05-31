@@ -1,0 +1,30 @@
+.imgUploaderContainer {
+    .imgUploaderLabel {
+        cursor: pointer;
+        padding-left:5px ;
+
+    }
+
+    .imgUploaderWrapper {
+        display: flex;
+        margin-top: 10px;
+
+        .addPhotoBtn {
+            flex: 1;
+        }
+        .selectedImg {
+            max-height: 250px;
+            min-height: 100px;
+            border-radius: 4px;
+            flex: 2;
+            overflow: hidden;_
+            img{
+                object-fit: cover;
+            }
+        }
+
+        .imgUploader {
+            display: none;
+        }
+    }
+}

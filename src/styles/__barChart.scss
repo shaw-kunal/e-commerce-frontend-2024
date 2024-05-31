@@ -1,0 +1,15 @@
+.barChartContainer{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+
+    .cardContainer{
+        margin-top: 50px;
+        box-shadow: none;
+        width: 60%;
+        max-height: 500px!important;
+    }
+}
