@@ -1,6 +1,9 @@
 import React from "react";
 import InputField from "../../components/InputField.tsx";
+import ImgUploader from "../../components/ImgUploader.tsx";
+import Button from "../../components/Button.tsx";
 import "../../styles/_newProduct.scss"
+import CardLayout from "../../layout/CardLayout.tsx"
 
 interface ProductStateTypes {
   name: string;
@@ -14,22 +17,27 @@ const NewProduct = () => {
     setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleImgChange=(name:string,value:string)=>{
+     setData((prev)=>({...prev,[name]:value}))
+  }
+
+
   const [data, setData] = React.useState<ProductStateTypes>({
     name: "",
     photo:'',
     stock:0,
     price:0,
-
   });
 
 
 
   return (
     <div className="newProductContainer">
-      
-     <div className="newProductWrapper">
+
+     
+      <CardLayout classname="newProductWrapper">
       <h2>Create New Product</h2>
-     <InputField
+        <InputField
         label="Name"
         name="name"
         onChange={handleChange}
@@ -51,14 +59,19 @@ const NewProduct = () => {
         type="number"
         value={data.price}
       />
-     <InputField
+     <ImgUploader
         label="Photo"
         name="photo"
-        onChange={handleChange}
-        type="string"
+        onChange={handleImgChange}
         value={data.photo}
       />
-     </div>
+      <Button 
+      text={"submit"}
+      type="submit"
+      classname="submitButton"
+      />
+     </CardLayout>
+     
     </div>
   );
 };

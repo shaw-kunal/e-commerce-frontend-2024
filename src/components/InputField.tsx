@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import "../styles/_inputField.scss"
 
 
@@ -15,8 +16,6 @@ const InputField = ({ label,name,type,value,required=false,onChange,width}:input
     const style:React.CSSProperties={
         width:`${width}px`
     }
-
-
 
   return (
     <div className="inputFieldContainer" style={style}>

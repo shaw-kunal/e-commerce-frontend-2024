@@ -51,7 +51,7 @@ const adminChartLink = [
     },
     
     {
-        url:"/admin/chart/bar",
+        url:"/admin/chart/line",
         Icon:FaChartLine,
         text:"Line"
     },

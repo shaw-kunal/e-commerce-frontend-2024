@@ -1,0 +1,10 @@
+.box-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    >h2{
+    color:white;
+    font-size: 1.2rem;
+     text-transform: capitalize;
+    }
+}

@@ -82,7 +82,7 @@ const Chart = ({
     ],
   };
 
-  return <Bar options={options} data={data} />;
+  return <Bar width={horizontal ?"150%":""} options={options} data={data} />;
 };
 
 export default Chart;

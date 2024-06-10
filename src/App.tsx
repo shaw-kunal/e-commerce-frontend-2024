@@ -13,7 +13,11 @@ const Product = lazy(() => import("./pages/admin/Product"));
 const Transaction = lazy(() => import("./pages/admin/Transaction"));
 const Customer = lazy(() => import("./pages/admin/Customer"));
 const NewProduct = lazy(() => import("./pages/admin/NewProduct"));
-const ProductManagement = lazy(() => import("./pages/admin/ProductManagement"));
+const ProductManagement = lazy(() => import("./pages/admin/management/ProductManagement"));
+const TransactionManagement = lazy(() => import("./pages/admin/management/TransactionManagement"));
+const BarChart = lazy(() => import("./pages/admin/charts/BarChart"));
+const PieChart = lazy(() => import("./pages/admin/charts/PieChart"));
+const LineChart = lazy(() => import("./pages/admin/charts/LineChart"));
 
 const App = () => {
   return (
@@ -26,14 +30,34 @@ const App = () => {
 
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="product" element={<Product />} />
-            <Route path="product/new" element={<NewProduct />} />
-            <Route path="product/:id" element={<ProductManagement />} />
-            <Route path="transaction" element={<Transaction />} />
+            <Route path="product" >
+              <Route index element={<Product />} />
+              
+              <Route path="new" element={<NewProduct />} />
+              <Route path=":id" element={<ProductManagement />} />
+            </Route>
+
+
+            <Route path="transaction" >
+              <Route index element={<Transaction />} />
+              <Route path=":id" element={<TransactionManagement />} />
+            </Route>
+
+            <Route path="chart" >
+              <Route  path="bar" element={<BarChart/>} />
+              <Route  path="pie" element={<PieChart/>} />
+              <Route  path="line" element={<LineChart/>} />
+            </Route>
+
+
+
+
             <Route path="customer" element={<Customer />} />
           </Route>
 
           {/* charts */}
+
+
 
           {/* managment */}
         </Routes>

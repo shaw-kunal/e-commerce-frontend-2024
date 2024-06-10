@@ -48,6 +48,7 @@ a {
 .appLayoutContainer {
   @include grid(1fr 4fr, 1rem);
   align-items: start;
+  overflow-x: hidden;
 }
 
 
@@ -147,4 +148,8 @@ a {
     }
 
   }
+}
+
+.chartContainer{
+  box-shadow: none!important;
 }

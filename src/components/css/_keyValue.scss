@@ -1,0 +1,21 @@
+.keyValueContainer{
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    margin-top: 10px;
+    align-items: center;
+    .keyWrapper{
+        display: flex;
+        align-items: center;
+    }
+    .iconStyle{
+        padding-right: 10px;
+    } 
+    .keyStyle{
+        text-transform: capitalize;
+        font-size: 1rem;
+        color: rgb(210, 205, 205);
+    }
+    .valueStyle{
+        color: gray;
+    }
+}
