@@ -1,0 +1,17 @@
+.PieChartContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:100px;
+    
+    .container {
+        color:black;
+        padding: 20px;
+        border-radius: 40px;
+        margin: 50px;
+        background-color: white;
+        width: 450px;
+        height: fit-content;
+        box-sizing: border-box;
+        box-shadow: rgb(194, 194, 201) 0px 50px0px -20px, rgba(186, 182, 182, 0.874) 0px 30px 60px -30px, rgba(186, 187, 188, 0.76) 0px -2px 6px 0px inset;;
+  }
+}
