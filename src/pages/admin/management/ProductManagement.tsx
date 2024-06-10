@@ -45,9 +45,7 @@ const ProductManagement = () => {
             <img src="https://cdn.pixabay.com/photo/2013/07/13/11/47/low-shoe-158667_640.png" alt="" />
            </div>
            <span className="productTitle">Puma Shoe</span>
-           <h2 className='productCost'>2000</h2>
-
-
+           <h2 className='productCost'>2000</h2> 
         </div>
       </CardLayout>
   
@@ -86,6 +84,7 @@ const ProductManagement = () => {
           <Button
             text={"Update"}
             type="submit"
+            classname="updateBtn"
           />
         </CardLayout>
       </div>
