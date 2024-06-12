@@ -1,4 +1,3 @@
-import { ChangeEvent } from "react";
 import "../styles/_inputField.scss"
 
 
@@ -7,12 +6,13 @@ interface inputProps{
     type:string,
     value?:string| number,
     required?:boolean,
-    name:string
+    name:string,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // Update prop type
-    width?:number
+    width?:number,
+    placeholder?:string
 }
 
-const InputField = ({ label,name,type,value,required=false,onChange,width}:inputProps) => {
+const InputField = ({ label,name,type,value,required=false,onChange,width,placeholder}:inputProps) => {
     const style:React.CSSProperties={
         width:`${width}px`
     }
@@ -23,6 +23,7 @@ const InputField = ({ label,name,type,value,required=false,onChange,width}:input
         <input
          type={type}
          name={name}
+         placeholder={placeholder}
          required={required}
          value={value}
          onChange={onChange}

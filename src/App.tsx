@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import AdminLayout from "./layout/AdminLayout";
+import StopWatch from "./pages/admin/apps/StopWatch";
+import Coin from "./pages/admin/apps/Coin";
+import Coupon from "./pages/admin/apps/Coupon";
 
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
@@ -47,6 +50,11 @@ const App = () => {
               <Route  path="bar" element={<BarChart/>} />
               <Route  path="pie" element={<PieChart/>} />
               <Route  path="line" element={<LineChart/>} />
+            </Route>
+            <Route path="app" >
+              <Route  path="stopwatch" element={<StopWatch/>} />
+              <Route  path="toss" element={<Coin/>} />
+              <Route  path="coupon" element={<Coupon/>} />
             </Route>
 
 

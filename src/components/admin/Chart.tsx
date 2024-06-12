@@ -186,10 +186,11 @@ interface LineChartProps{
   data:number[],
   backgroundColor:string,
   borderColor:string,
-  labels?:string[]
+  labels?:string[],
+  title?:string
 }
 
-export const CustomLineChart =({label,data,backgroundColor,borderColor,labels=months}:LineChartProps)=>{
+export const CustomLineChart =({label,data,backgroundColor,borderColor,labels=months,title="Line Chart"}:LineChartProps)=>{
   
 
   const lineData:ChartData<'line',number[],string>={
@@ -200,6 +201,7 @@ export const CustomLineChart =({label,data,backgroundColor,borderColor,labels=mo
       borderColor,
       backgroundColor,
       fill:true,
+      borderWidth:1,
     }],
 
   }
@@ -213,10 +215,16 @@ export const CustomLineChart =({label,data,backgroundColor,borderColor,labels=mo
       },
       title:{
         display:true,
-        text:"Char.js Line Chart"
+        text:title,
+
+        color:borderColor,
+        font:{
+          size:30,
+          
+        }
       }
     }
   }
 
-  return  <Line  options={LineOptions} data={lineData}/>
+  return  <Line   options={LineOptions} data={lineData}/>
 }

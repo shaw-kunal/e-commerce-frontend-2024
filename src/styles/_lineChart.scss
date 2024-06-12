@@ -1,13 +1,18 @@
 .lineChartContainer {
     padding: 20px;
 
+
     .elementContainer {
+        position: relative;
         width: 100%;
         margin-top: 50px;
         padding: 20px;
         border-radius: 10px;
         background-color: white;
         height: 50vh!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     }
 }

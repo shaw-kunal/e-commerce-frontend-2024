@@ -10,7 +10,8 @@ interface buttonProps {
     textColor?: string,
     width?: string,
     position?: "left" | "right" | "center",
-    classname?:string
+    classname?:string,
+    onClick?:()=>void
 }
 
 const Button = ({
@@ -21,9 +22,8 @@ const Button = ({
     bgColor = undefined,
     textColor = undefined,
     position = "center",
-    classname=''
-
-
+    classname='',
+    onClick=()=>{},
 }: buttonProps) => {
 
     const style: React.CSSProperties = {
@@ -38,6 +38,7 @@ const Button = ({
         
             <div className='btnContainer'>
                 <button
+                onClick={onClick}
                 className={classNames('customButton',classname)}
                 type={type}
                 style={style}>

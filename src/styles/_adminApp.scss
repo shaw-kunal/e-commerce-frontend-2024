@@ -1,0 +1,85 @@
+@import './globalCssVariable.scss';
+@import  './mixin.scss';
+
+.adminAppContainer {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 450px;
+
+    }
+
+    .stopWatchContainer {
+        gap: 30px;
+
+        span {
+            font-size: 40px;
+        }
+
+        .btnGrp {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+    }
+    .tossCoin{
+        position: relative;
+        @include square(15rem);
+        transform-style:preserve-3d ;
+        transition:  all .8s ease-out;
+
+        >div{
+            position: absolute;
+            @include square(100%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            backface-visibility: hidden;
+            cursor: pointer;
+            filter: drop-shadow(0px 10px 10px rgba(64, 98, 233, 0.54));
+            &:first-of-type{
+                background-image: url('../assets/images/heads.png');
+            }
+            &:last-of-type{
+                background-image: url('../assets/images/tails.png');
+                transform: rotateY(-180deg);
+            }
+        }
+
+
+
+    }
+    .coupon-container{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        .couponResult{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .coupon-code{
+             flex: 1;
+             max-width: 200px;
+            
+            }
+        .copy-coupon{
+            background-color: black;
+            border: 1px solid rgb(33, 30, 30);
+            padding: 4px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .1s ease-in;
+           
+            }
+        }
+
+    }
+
+}

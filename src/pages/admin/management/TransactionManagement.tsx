@@ -98,7 +98,7 @@ const TransactionManagement = () => {
                         icon={"*"}
                         k={"Tax"}
                         value={200}
-                        seperator={"-"}
+                        seperator={":"}
                         classname='amountInfo' />
 
                     <KeyValueList
