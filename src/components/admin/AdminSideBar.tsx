@@ -6,6 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { GrTransaction } from "react-icons/gr";
 import "../../styles/adminSideBar.scss"
 import { RiCoupon3Fill } from "react-icons/ri";
+import { Tooltip  } from "react-tooltip";
 
 
 
@@ -86,13 +87,14 @@ type linkProps = {
     url:string,
     Icon:IconType,
     location:Location,
-    text:string
+    text?:string
 }
 
 const LI = ({url,Icon,location,text}:linkProps)=>(
 <li className={location.pathname === url ? "activeLink" : ""}>
          <Link to={url}>
-               <Icon/>{text}
+              <span> <Icon data-tooltip-id={text}  fontSize={22}/></span> <span className="sidebar-link-text">{text}</span>
+               <Tooltip   id={text} content={text} className="react-tooltip"/>
          </Link>
     </li>
 )
@@ -105,7 +107,7 @@ const AdminSideBar = () => {
     <aside className="sideBarContainer">
         <h2 className=" sidebarLogo whisper-regular">Logo</h2>
         <div className="sidebarWrapper">
-            <p>DASHBOARD</p>
+            <p className="sidbar-heading">DASHBOARD</p>
             <ul>
                {
                 sidebarLink.map((item)=>(
@@ -125,7 +127,7 @@ const AdminSideBar = () => {
 
 
         <div className="sidebarWrapper">
-            <p>CHARTS</p>
+            <p className="sidbar-heading">CHARTS</p>
             <ul>
                {
                 adminChartLink.map((item)=>(
@@ -144,7 +146,7 @@ const AdminSideBar = () => {
         </div>
 
         <div className="sidebarWrapper">
-            <p>APPS</p>
+            <p className="sidbar-heading"> APPS</p>
             <ul>
                {
                 adminApps.map((item)=>(

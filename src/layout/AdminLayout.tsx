@@ -6,8 +6,11 @@ import "../styles/app.scss"
 const AdminLayout = () => {
   return (
     <div className='appLayoutContainer'>
-      <AdminSideBar/>
+      <AdminSideBar />
+      <div className='applayout-outlet'>
       <Outlet/>
+      </div>
+      <div className='bg-blur'></div>
     </div>
   )
 }
