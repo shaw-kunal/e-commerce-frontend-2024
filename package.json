@@ -20,6 +20,7 @@
     "react-icons": "^5.1.0",
     "react-router-dom": "^6.23.0",
     "react-table": "^7.8.0",
+    "react-tooltip": "^5.26.4",
     "sass": "^1.75.0"
   },
   "devDependencies": {

@@ -9,6 +9,13 @@
     overflow-x: hidden;
     position: sticky;
     top: 0px;
+    min-width: 60px;
+    @include mobile{
+        width: 70px;
+        overflow-x: hidden;
+        padding: 5px;
+    }
+
 
     .sidebarLogo {
         width: 100%;
@@ -16,16 +23,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @include fontGradient()
+        @include fontGradient();
+        @include mobile{
+            width: 60px;
+        }
     }
 
     .sidebarWrapper {
         margin-top: 20px;
-        padding-left: 20px;
+        padding-right: 10px;
 
-        >p {
+        @include mobile{
+           padding-left: 0;
+        }
+
+        .sidbar-heading {
             font-size: $semiTextTitle ;
             color: $dimmed-white;
+            @include mobile{
+                display: none;
+            }
         }
 
         >ul {
@@ -38,8 +55,13 @@
             >li {
                 width: 100%;
                 padding: 5px;
-                padding-left: 20px;
+                margin-left: 20px;
                 border-radius: 5px;
+                padding: 8px;
+                @include mobile{
+                 width: fit-content;
+
+                }
 
                 >a {
                     font-size: $font-size;
@@ -48,12 +70,29 @@
                     gap: 20px;
                     color: white;
 
+                    .sidebar-link-text{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+
+                    .react-tooltip{
+                        display: none;
+                        @include mobile{
+                            display: block;
+                            z-index: 100;
+                            padding: 2px;
+                            
+                        }
+                    }
+
                 }
 
             }
 
             .activeLink {
                 background-color: $sideBarActiveLinkColor ;
+
 
             }
         }

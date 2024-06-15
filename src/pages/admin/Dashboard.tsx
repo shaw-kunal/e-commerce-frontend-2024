@@ -9,7 +9,7 @@ import DashboardTable from "../../components/admin/DashboardTable";
 const Dashboard = () => {
   return (
     <div className="dashBoardContainer">
-      <section className="searchBarContainer">
+     <section className="searchBarContainer">
         <div className="searchItems">
           <div className="searchIcon">
             <BiSearch />
@@ -22,6 +22,7 @@ const Dashboard = () => {
           alt=""
         />
       </section>
+      {/*
       <section className="dashBoardStaticsWidget">
         <WidgetItem
           text={"revenue"}
@@ -48,10 +49,11 @@ const Dashboard = () => {
           gradientSecondColor="#38f9d7"
         />
         <WidgetItem text={"Customer"} amount={false} percent={20} value={300} />
-      </section>
-      <section className="graphContainer">
+  </section>*/}
+       <section className="graphContainer">
         <div className="revenueChart">
           <h2>Revenue & Transaction</h2>
+          
           <Chart 
           data_1={[122,433,200,233,122]}
           data_2={[300,222,234,443,500]}
@@ -60,6 +62,7 @@ const Dashboard = () => {
           color_1="#43e97b"
           color_2="aqua"
           />
+        
         </div>
         <div className="dashboardCategories">
           <h2>Inventory</h2>
@@ -69,11 +72,9 @@ const Dashboard = () => {
           <CategoriesItem  name="Beauty" percent={95}  color="#0cf049"/>
         </div>
       </section>
-
-      <section className="transactionContainer">
-        <div className="genderChart">
+ <section className="transactionContainer">
+      <div className="genderChart">
           <h2>Gender Ratio</h2>
-          {/* chart */}
           <DoughuntChart
           labels={["Female","Male"]}
           data={[12,20]}
@@ -85,9 +86,13 @@ const Dashboard = () => {
 
         </div>
         <div className="transactionTable">
+        <div className="transactionTable-container">
+        <div className="transactionTableWrapper">
           <DashboardTable data={data.transaction}/>
+          </div>
         </div>
-      </section>
+        </div>
+      </section> 
 
     </div>
   );

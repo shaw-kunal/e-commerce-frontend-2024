@@ -1,0 +1,16 @@
+.home-container{
+    .background-image{
+        background-image: url('../assets/images/hero-01.jpg');
+        background-position:center center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+
+}

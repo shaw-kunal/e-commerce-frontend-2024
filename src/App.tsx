@@ -2,9 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import AdminLayout from "./layout/AdminLayout";
-import StopWatch from "./pages/admin/apps/StopWatch";
-import Coin from "./pages/admin/apps/Coin";
-import Coupon from "./pages/admin/apps/Coupon";
+
 
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
@@ -21,6 +19,11 @@ const TransactionManagement = lazy(() => import("./pages/admin/management/Transa
 const BarChart = lazy(() => import("./pages/admin/charts/BarChart"));
 const PieChart = lazy(() => import("./pages/admin/charts/PieChart"));
 const LineChart = lazy(() => import("./pages/admin/charts/LineChart"));
+const StopWatch=lazy(()=> import("./pages/admin/apps/StopWatch"));
+const Coin =lazy(()=>import("./pages/admin/apps/Coin"));
+const Coupon =lazy(()=>import("./pages/admin/apps/Coupon"));
+
+
 
 const App = () => {
   return (
